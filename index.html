@@ -451,16 +451,16 @@ linear-gradient(90deg,rgba(3,10,35,.86),rgba(3,10,35,.3)),url("data:image/jpeg;b
     </div>
   </div>
   <div class="quickGrid">
-    <a class="quickCard q1" target="_blank" rel="noopener" href="https://forms.gle/usAxx9QA6Bm5LFFo6">
+    <a class="quickCard q1" target="_blank" rel="noopener" href="https://forms.gle/Ro2mB6TrUEgpbc9m8">
       <span class="quickIcon">📺</span><span><b>LAPORAN PEMANTAUAN HARIAN CCTV</b><small>Pentadbir / Warden</small></span><strong>BUKA FORM ↗</strong>
     </a>
-    <a class="quickCard q2" target="_blank" rel="noopener" href="https://forms.gle/Fnpz9A1oE6srnAVP8">
+    <a class="quickCard q2" target="_blank" rel="noopener" href="https://forms.gle/78gJW9UjCbx6sfbd7">
       <span class="quickIcon">🏠</span><span><b>LAPORAN BERTUGAS HARIAN ASPUTERA & ASPUTERI</b><small>Pentadbir / Warden</small></span><strong>BUKA FORM ↗</strong>
     </a>
-    <a class="quickCard q3" target="_blank" rel="noopener" href="https://forms.gle/jZpNQJoWVPvkD9Q96">
+    <a class="quickCard q3" target="_blank" rel="noopener" href="https://forms.gle/R2xVycAGkyFYp2h58">
       <span class="quickIcon">🍽️</span><span><b>LAPORAN UJI RASA MAKANAN & MINUMAN</b><small>Pentadbir / Warden</small></span><strong>BUKA FORM ↗</strong>
     </a>
-    <a class="quickCard q4" target="_blank" rel="noopener" href="https://forms.gle/6FHK2DsRBxdRe9TW8">
+    <a class="quickCard q4" target="_blank" rel="noopener" href="https://forms.gle/N1jrjbaq3dQ5VWxb6">
       <span class="quickIcon">📋</span><span><b>LAPORAN ROLL-CALL WARDEN</b><small>Pentadbir / Warden</small></span><strong>BUKA FORM ↗</strong>
     </a>
   </div>
@@ -490,8 +490,13 @@ September:[
 ["🏠","LAPORAN BERTUGAS HARIAN ASPUTERA & ASPUTERI","Laporan bertugas harian Pentadbir / Warden","https://forms.gle/Fnpz9A1oE6srnAVP8"],
 ["🍽️","LAPORAN UJI RASA MAKANAN MINUMAN","Uji rasa makanan & minuman harian","https://forms.gle/jZpNQJoWVPvkD9Q96"],
 ["📋","LAPORAN ROLL-CALL WARDEN","Roll-call Pentadbir / Warden Asrama Seri Merchu","https://forms.gle/6FHK2DsRBxdRe9TW8"]
-],Oktober:[],November:[],Disember:[]};
-function month(m,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');let box=document.getElementById('forms');if(!forms[m].length){box.innerHTML=`<div class="form" style="grid-column:1/-1;text-align:center"><div class="emoji">🔧</div><h3>BORANG ${m.toUpperCase()} 2026</h3><p>Pautan akan dikemaskini apabila Google Form bulan ${m} disediakan.</p></div>`;document.getElementById('note').textContent="Ruang bulan telah disediakan untuk kemas kini pautan.";return}box.innerHTML=forms[m].map(x=>`<div class="form"><div class="emoji">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p><a class="btn" target="_blank" href="${x[3]}">Buka Form ↗</a></div>`).join('');document.getElementById('note').textContent="4 pautan aktif untuk September 2026."; }
+],Oktober:[
+["📺","LAPORAN PEMANTAUAN HARIAN CCTV","Pemantauan CCTV Asrama Seri Merchu (Pentadbir / Warden)","https://forms.gle/Ro2mB6TrUEgpbc9m8"],
+["🏠","LAPORAN BERTUGAS HARIAN ASPUTERA & ASPUTERI","Laporan bertugas harian Pentadbir / Warden","https://forms.gle/78gJW9UjCbx6sfbd7"],
+["🍽️","LAPORAN BERTUGAS UJI RASA MAKANAN & MINUMAN","Uji rasa makanan & minuman (Pentadbir / Warden)","https://forms.gle/R2xVycAGkyFYp2h58"],
+["📋","LAPORAN ROLL-CALL WARDEN","Roll-call Pentadbir / Warden Asrama Seri Merchu","https://forms.gle/N1jrjbaq3dQ5VWxb6"]
+],November:[],Disember:[]};
+function month(m,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');let box=document.getElementById('forms');if(!forms[m].length){box.innerHTML=`<div class="form" style="grid-column:1/-1;text-align:center"><div class="emoji">🔧</div><h3>BORANG ${m.toUpperCase()} 2026</h3><p>Pautan akan dikemaskini apabila Google Form bulan ${m} disediakan.</p></div>`;document.getElementById('note').textContent="Ruang bulan telah disediakan untuk kemas kini pautan.";return}box.innerHTML=forms[m].map(x=>`<div class="form"><div class="emoji">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p><a class="btn" target="_blank" href="${x[3]}">Buka Form ↗</a></div>`).join('');document.getElementById('note').textContent="4 pautan aktif untuk "+m+" 2026."; }
 month('September',document.querySelector('.tab'));
 function clock(){
   try{
